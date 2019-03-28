@@ -51,7 +51,7 @@ if (!function_exists('Em4nl\U\send_content_helper')) {
 
 
 if (!function_exists('Em4nl\U\send_text')) {
-    function send_text($body, $is_cacheable, $status) {
+    function send_text($body, $is_cacheable=TRUE, $status='200') {
         send_content_helper($body, $is_cacheable, $status, 'text/plain');
         echo $body;
     }
@@ -59,7 +59,7 @@ if (!function_exists('Em4nl\U\send_text')) {
 
 
 if (!function_exists('Em4nl\U\send_html')) {
-    function send_html($body, $is_cacheable, $status) {
+    function send_html($body, $is_cacheable=TRUE, $status='200') {
         send_content_helper($body, $is_cacheable, $status, 'text/html');
         echo $body;
     }
@@ -67,7 +67,7 @@ if (!function_exists('Em4nl\U\send_html')) {
 
 
 if (!function_exists('Em4nl\U\send_json')) {
-    function send_json($body, $is_cacheable, $status) {
+    function send_json($body, $is_cacheable=TRUE, $status='200') {
         send_content_helper($body, $is_cacheable, $status, 'application/json');
         echo json_encode($body);
     }
@@ -75,7 +75,7 @@ if (!function_exists('Em4nl\U\send_json')) {
 
 
 if (!function_exists('Em4nl\U\send_xml')) {
-    function send_xml($body, $is_cacheable, $status) {
+    function send_xml($body, $is_cacheable=TRUE, $status='200') {
         send_content_helper($body, $is_cacheable, $status, 'text/xml');
         echo $body;
     }
