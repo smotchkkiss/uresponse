@@ -118,10 +118,6 @@ if (!function_exists('Em4nl\U\send_redirect')) {
             return;
         }
 
-        if ($location[strlen($location) - 1] !== '/') {
-            $location .= '/';
-        }
-
         _set_do_cache_if_undefined(FALSE);
 
         define('UNPLUG_RESPONSE_SENT', TRUE);

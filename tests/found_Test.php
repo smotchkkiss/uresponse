@@ -66,7 +66,7 @@ class found_Test extends TestCase {
         found('https://example.com/wurm');
         $this->assertEquals(
             array_pop($header_calls),
-            'Location: https://example.com/wurm/'
+            'Location: https://example.com/wurm'
         );
     }
 
@@ -75,7 +75,7 @@ class found_Test extends TestCase {
         found('https://example.com/sein/129');
         $this->assertEquals(
             array_pop($header_calls),
-            'Location: https://example.com/sein/129/'
+            'Location: https://example.com/sein/129'
         );
     }
 
@@ -84,7 +84,7 @@ class found_Test extends TestCase {
         found('https://example.com/wurm/sein/0000');
         $this->assertEquals(
             array_pop($header_calls),
-            'Location: https://example.com/wurm/sein/0000/'
+            'Location: https://example.com/wurm/sein/0000'
         );
     }
 

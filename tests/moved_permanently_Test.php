@@ -66,7 +66,7 @@ class moved_permanently_Test extends TestCase {
         moved_permanently('https://example.com/wurm');
         $this->assertEquals(
             array_pop($header_calls),
-            'Location: https://example.com/wurm/'
+            'Location: https://example.com/wurm'
         );
     }
 
@@ -74,7 +74,7 @@ class moved_permanently_Test extends TestCase {
         global $header_calls;
         moved_permanently('https://example.com/sein/129');
         $this->assertEquals(
-            'Location: https://example.com/sein/129/',
+            'Location: https://example.com/sein/129',
             array_pop($header_calls)
         );
     }
@@ -83,7 +83,7 @@ class moved_permanently_Test extends TestCase {
         global $header_calls;
         moved_permanently('https://example.com/wurm/sein/0000');
         $this->assertEquals(
-            'Location: https://example.com/wurm/sein/0000/',
+            'Location: https://example.com/wurm/sein/0000',
             array_pop($header_calls)
         );
     }
